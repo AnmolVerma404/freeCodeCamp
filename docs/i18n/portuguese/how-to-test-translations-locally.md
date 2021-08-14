@@ -15,7 +15,7 @@ Primeiro, visite o arquivo `config/i18n/all-langs.js` para adicionar o idioma à
 - `langDisplayNames`: esses são os nomes dos idiomas que aparecerão para a seleção no menu de navegação.
 - `langCodes`: esses são os códigos de idiomas usados para formatar datas e números. Esses deverão ser códigos Unicode CLDR ao invés de códigos ISO.
 
-Como um exemplo, se você tivesse que habilitar o idioma Dothraki como seu idioma, os objetos `all-langs.js` devem ficar assim:
+Como um exemplo, se você tivesse que habilitar o idioma Dothraki como seu idioma, os objetos  `all-langs.js` devem ficar assim:
 
 ```js
 const availableLangs = {
@@ -85,7 +85,7 @@ const algoliaIndices = {
 };
 ```
 
-Depois, você precisará informar ao client quais certificações estão traduzidas e quais ainda estão em inglês. Abra o arquivo `utils/is-audited.js`. Dentro de `auditedCerts`, adicione uma nova chave com o valor de `availableLangs` de seu idioma. Atribua o valor daquela chave a um array que contém os _nomes hifenizados_ para as certificações foram traduzidas. Consulte os dados existentes para aqueles nomes hifenizados.
+Depois, você precisará informar ao client quais certificações estão traduzidas e quais ainda estão em inglês. Abra o arquivo `utils/is-audited.js`. Dentro de `auditedCerts`, adicione uma nova chave com o valor de `availableLangs` de seu idioma. Assign the value of that key to an array containing the _dashed names_ for the certifications that have been translated. Consulte os dados existentes para aqueles nomes hifenizados.
 
 Dando continuidade ao trabalho para habilitar o idioma Dothraki – traduzimos as três primeiras certificações:
 
@@ -134,4 +134,4 @@ Quando tiver os arquivos em mãos, você precisará colocá-los no diretório co
 
 Quando estes arquivos estiverem no local certo, você deve poder usar `npm run develop` para ver sua versão traduzida do freeCodeCamp.
 
-> [!ATTENTION] Embora você possa realizar as traduções localmente para fins de teste, lembramos a todos que as traduções _não_ devem ser enviadas pelo GitHub e devem ser feitas somente pelo Crowdin. Certifique-se de reiniciar sua base de código local após realizar os testes.
+> [!ATTENTION] While you may perform translations locally for the purpose of testing, we remind everyone that translations should _not_ be submitted through GitHub and should only be done through Crowdin. Certifique-se de reiniciar sua base de código local após realizar os testes.
